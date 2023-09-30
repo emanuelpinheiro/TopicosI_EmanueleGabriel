@@ -47,7 +47,7 @@ public class GameResource {
     public Game insert(Game game){
         Game novoGame = new Game();
         novoGame.setNome(game.getNome());
-        novoGame.setCategoria(game.getCategoria());
+        novoGame.setGenero(game.getGenero());
         novoGame.setPreco(game.getPreco());
 
         repository.persist(novoGame);
@@ -75,7 +75,7 @@ public class GameResource {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
         gameToUpdate.setNome(game.getNome());
-        gameToUpdate.setCategoria(game.getCategoria());
+        gameToUpdate.setGenero(game.getGenero());
         gameToUpdate.setPreco(game.getPreco());
 
         repository.persist(gameToUpdate);

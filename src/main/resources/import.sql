@@ -5,7 +5,12 @@
 -- insert into myentity (id, field) values(3, 'field-3');
 -- alter sequence myentity_seq restart with 4;
 
-insert into game (nome, categoria, preco) values('The Last of Us Part I', 'Ação e aventura', 249.90);
-insert into game (nome, categoria, preco) values('Minecraft', 'Mundo aberto', 129.00);
-insert into game (nome, categoria, preco) values('Red Dead Redemption 2', 'Ação e aventura', 299.90);
-insert into game (nome, categoria, preco) values('Deceit', 'Terror', 0.00);
+insert into gamegenre (nome) values('Ação e aventura');
+insert into gamegenre (nome) values('Mundo aberto');
+insert into gamegenre (nome) values('Terror');
+
+
+insert into game (nome, id_genero, preco) values('The Last of Us Part I', 1, 249.90);
+insert into game (nome, id_genero, preco) values('Minecraft', 2, 129.00);
+insert into game (nome, id_genero, preco) values('Red Dead Redemption 2', 1, 299.90);
+insert into game (nome, id_genero, preco) values('Deceit', 3, 0.00);
